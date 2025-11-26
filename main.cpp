@@ -144,7 +144,7 @@ int main() {
             double median = trial_fprs[numTrials / 2];
             double t_fpr = theoretical_fpr(k, c);
 
-            data_file5 << "HashOne" << "," << c << "," << k << "," << median << "," << t_fpr << std::endl;
+            data_file5 << "HashOne" << "," << c << "," << k << "," << median << "," << t_fpr << endl;
         }
     }
     data_file5.close();
@@ -178,7 +178,7 @@ int main() {
             double median = trial_fprs[numTrials / 2];
             double t_fpr = theoretical_fpr(k, c);
 
-            data_file6 << "HashTwo" << "," << c << "," << k << "," << median << "," << t_fpr << std::endl;
+            data_file6 << "HashTwo" << "," << c << "," << k << "," << median << "," << t_fpr << endl;
         }
     }
     data_file6.close();
