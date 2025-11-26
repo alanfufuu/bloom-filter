@@ -42,72 +42,72 @@ vector<int> k_ranges(int c) {
 int main() {
     long long N = 2147483647;
 
-    // long long m = 1000;
-    // long long numItems = 2000;
+    long long m_one = 1000;
+    long long numItems = 2000;
 
-    // HashOne hash_one(m, N);
-    // HashTwo hash_two(m);
-    // vector<int> bins(m, 0);
+    HashOne hash_one(m_one, N);
+    HashTwo hash_two(m_one);
+    vector<int> bins(m_one, 0);
 
-    // random_device rd;
-    // mt19937 gen(rd());
-    // uniform_int_distribution<long long> dist(0, N - 1);
+    random_device rd;
+    mt19937 gen(rd());
+    uniform_int_distribution<long long> dist(0, N - 1);
 
-    // //one, random
-    // for(int i = 0; i < numItems; i++) {
-    //     long long num = dist(gen);
-    //     long long index = hash_one.hash(num);
-    //     bins[index]++;
-    // }
-    // ofstream data_file1("hashOne_random.csv");
-    // data_file1 << "bin_id,load\n";
-    // for (long long i = 0; i < m; ++i) {
-    //     data_file1 << i << "," << bins[i] << "\n";
-    //     bins[i] = 0;
-    // }
-    // data_file1.close();
+    //one, random
+    for(int i = 0; i < numItems; i++) {
+        long long num = dist(gen);
+        long long index = hash_one.hash(num);
+        bins[index]++;
+    }
+    ofstream data_file1("hashOne_random.csv");
+    data_file1 << "bin_id,load\n";
+    for (long long i = 0; i < m_one; ++i) {
+        data_file1 << i << "," << bins[i] << "\n";
+        bins[i] = 0;
+    }
+    data_file1.close();
 
-    // //one, correlated
-    // for(long long i =0; i < numItems; i++) {
-    //     long long num = i * 2;
-    //     long long index = hash_one.hash(num);
-    //     bins[index]++;
-    // }
-    // ofstream data_file2("hashOne_correlated.csv");
-    // data_file2 << "bin_id,load\n";
-    // for (long long i = 0; i < m; ++i) {
-    //     data_file2 << i << "," << bins[i] << "\n";
-    //     bins[i] = 0;
-    // }
-    // data_file2.close();
+    //one, correlated
+    for(long long i =0; i < numItems; i++) {
+        long long num = i * 2;
+        long long index = hash_one.hash(num);
+        bins[index]++;
+    }
+    ofstream data_file2("hashOne_correlated.csv");
+    data_file2 << "bin_id,load\n";
+    for (long long i = 0; i < m_one; ++i) {
+        data_file2 << i << "," << bins[i] << "\n";
+        bins[i] = 0;
+    }
+    data_file2.close();
 
-    // //two, random
-    // for(int i = 0; i < numItems; i++) {
-    //     long long num = dist(gen);
-    //     long long index = hash_two.hash(num);
-    //     bins[index]++;
-    // }
-    // ofstream data_file3("hashTwo_random.csv");
-    // data_file3 << "bin_id,load\n";
-    // for (long long i = 0; i < m; ++i) {
-    //     data_file3 << i << "," << bins[i] << "\n";
-    //     bins[i] = 0;
-    // }
-    // data_file3.close();
+    //two, random
+    for(int i = 0; i < numItems; i++) {
+        long long num = dist(gen);
+        long long index = hash_two.hash(num);
+        bins[index]++;
+    }
+    ofstream data_file3("hashTwo_random.csv");
+    data_file3 << "bin_id,load\n";
+    for (long long i = 0; i < m_one; ++i) {
+        data_file3 << i << "," << bins[i] << "\n";
+        bins[i] = 0;
+    }
+    data_file3.close();
 
-    // //two, correlated
-    // for(long long i =0; i < numItems; i++) {
-    //     long long num = i * 2;
-    //     long long index = hash_two.hash(num);
-    //     bins[index]++;
-    // }
-    // ofstream data_file4("hashTwo_correlated.csv");
-    // data_file4 << "bin_id,load\n";
-    // for (long long i = 0; i < m; ++i) {
-    //     data_file4 << i << "," << bins[i] << "\n";
-    //     bins[i] = 0;
-    // }
-    // data_file4.close();
+    //two, correlated
+    for(long long i =0; i < numItems; i++) {
+        long long num = i * 2;
+        long long index = hash_two.hash(num);
+        bins[index]++;
+    }
+    ofstream data_file4("hashTwo_correlated.csv");
+    data_file4 << "bin_id,load\n";
+    for (long long i = 0; i < m_one; ++i) {
+        data_file4 << i << "," << bins[i] << "\n";
+        bins[i] = 0;
+    }
+    data_file4.close();
 
     long long n = 100000;
     long long p = N;
